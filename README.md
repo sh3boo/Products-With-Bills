@@ -1,5 +1,5 @@
 ### Dashboard
-![Dashboard Screenshot](Products-With-Bills/ScreenShots/2.png)
+![Dashboard Screenshot](ScreenShots/2.png)
 
 # NationalTask - Bill Management System
 
