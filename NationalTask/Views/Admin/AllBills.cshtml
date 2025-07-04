@@ -1,0 +1,76 @@
+@model IEnumerable<NationalTask.DTOs.BillDto>
+
+@{
+    ViewData["Title"] = "All Bills";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
+                    <div>
+                        <h2 class="mb-0">All Bills</h2>
+                        <p class="text-white-50 mb-0">Administrative view of all customer bills</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-light text-dark">Total: @Model.Count()</span>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    @if (!Model.Any())
+                    {
+                        <div class="text-center py-5">
+                            <h4 class="text-muted mb-3">No bills found</h4>
+                            <p class="text-muted">There are no bills in the system yet.</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Bill Code</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Total Price</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var bill in Model)
+                                    {
+                                        <tr>
+                                            <td><span class="fw-bold text-primary">@bill.Code</span></td>
+                                            <td>@bill.CustomerName</td>
+                                            <td>@bill.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                            <td><span class="fw-bold text-success">$@bill.TotalPrice.ToString("F2")</span></td>
+                                            <td class="text-center">
+                                                <div class="btn-group" role="group">
+                                                    <a asp-controller="Customer" asp-action="BillDetails" asp-route-id="@bill.Id" class="btn btn-info btn-sm">View</a>
+                                                    <form asp-action="DeleteBill" asp-route-id="@bill.Id" method="post" style="display:inline">
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this bill?');">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <span class="text-muted">Showing <strong>@Model.Count()</strong> bills</span>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Home</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

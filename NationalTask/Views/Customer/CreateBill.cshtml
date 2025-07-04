@@ -1,0 +1,91 @@
+@model NationalTask.Controllers.CreateBillViewModel
+
+@{
+    ViewData["Title"] = "Create Bill";
+    var products = ViewBag.Products as IEnumerable<NationalTask.DTOs.ProductDto> ?? new List<NationalTask.DTOs.ProductDto>();
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h2 class="mb-0">Create New Bill</h2>
+                    <p class="text-white-50 mb-0">Add products to create your bill</p>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="CreateBill" method="post" id="billForm">
+                        <input type="hidden" asp-for="CustomerId" value="@ViewBag.CustomerId" />
+                        
+                        <div id="billDetails">
+                            <div class="bill-detail-row mb-4">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="row align-items-end">
+                                            <div class="col-md-6">
+                                                <label class="form-label fw-bold">Product</label>
+                                                <select name="BillDetails[0].ProductId" class="form-select" required>
+                                                    <option value="">Select a product...</option>
+                                                    @foreach (var product in products)
+                                                    {
+                                                        <option value="@product.Id" data-price="@product.Price">@product.Name - $@product.Price</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold">Quantity</label>
+                                                <input type="number" name="BillDetails[0].Quantity" class="form-control" value="1" min="1" required />
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="button" class="btn btn-outline-danger btn-sm remove-row w-100">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mb-4">
+                            <button type="button" class="btn btn-success btn-lg" id="addProduct">Add Another Product</button>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a asp-action="Profile" class="btn btn-secondary btn-lg w-100">Cancel</a>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Create Bill</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            let rowIndex = 1;
+            
+            $('#addProduct').click(function() {
+                const newRow = $('.bill-detail-row:first').clone();
+                newRow.find('select').attr('name', `BillDetails[${rowIndex}].ProductId`);
+                newRow.find('input').attr('name', `BillDetails[${rowIndex}].Quantity`).val(1);
+                newRow.find('select').val('');
+                newRow.find('.remove-row').show();
+                $('#billDetails').append(newRow);
+                rowIndex++;
+            });
+            
+            $(document).on('click', '.remove-row', function() {
+                $(this).closest('.bill-detail-row').remove();
+            });
+            
+            $('.bill-detail-row:first .remove-row').hide();
+        });
+    </script>
+} 

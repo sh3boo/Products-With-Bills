@@ -1,0 +1,126 @@
+@model NationalTask.DTOs.BillDto
+
+@{
+    ViewData["Title"] = "Bill Details";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h2 class="mb-0">Bill Details</h2>
+                    <p class="text-white-50 mb-0">Bill Code: @Model.Code</p>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row mb-4">
+                        <div class="col-lg-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Customer Information</h5>
+                                    <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <div>
+                                                <small class="text-muted d-block">Customer Name</small>
+                                                <strong>@Model.CustomerName</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div>
+                                                <small class="text-muted d-block">Registration Date</small>
+                                                <strong>@Model.CustomerRegistrationDate.ToString("dd/MM/yyyy")</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Bill Information</h5>
+                                    <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <div>
+                                                <small class="text-white-50 d-block">Bill Code</small>
+                                                <strong>@Model.Code</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <div>
+                                                <small class="text-white-50 d-block">Created Date</small>
+                                                <strong>@Model.CreatedDate.ToString("dd/MM/yyyy")</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div>
+                                                <small class="text-white-50 d-block">Total Amount</small>
+                                                <strong style="font-size: 1.2rem;">$@Model.TotalPrice.ToString("F2")</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Products</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th class="text-center">Quantity</th>
+                                            <th class="text-end">Unit Price</th>
+                                            <th class="text-end">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var detail in Model.BillDetails)
+                                        {
+                                            <tr>
+                                                <td><strong>@detail.ProductName</strong></td>
+                                                <td class="text-center"><span class="badge bg-primary">@detail.Quantity</span></td>
+                                                <td class="text-end">$@detail.UnitPrice.ToString("F2")</td>
+                                                <td class="text-end"><strong>$@detail.TotalPrice.ToString("F2")</strong></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="table-primary">
+                                            <td colspan="3" class="text-end"><strong>Total Amount:</strong></td>
+                                            <td class="text-end"><strong style="font-size: 1.1rem;">$@Model.TotalPrice.ToString("F2")</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <a asp-action="PrintBill" asp-route-id="@Model.Id" target="_blank" class="btn btn-success btn-lg w-100">Print Bill</a>
+                        </div>
+                        <div class="col-md-4">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a asp-controller="Admin" asp-action="AllBills" class="btn btn-secondary btn-lg w-100">All Bills</a>
+                            }
+                            else
+                            {
+                                <a asp-action="MyBills" class="btn btn-secondary btn-lg w-100">My Bills</a>
+                            }
+                        </div>
+                        <div class="col-md-4">
+                            <a asp-action="Profile" class="btn btn-primary btn-lg w-100">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|d:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\nationaltask\\nationaltask\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|solutionrelative:nationaltask\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|d:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\nationaltask\\nationaltask\\reports\\customerbillreport.cs||{95027D70-C6B4-4736-8A48-AD3582187321}|Form",
+      "RelativeMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|solutionrelative:nationaltask\\reports\\customerbillreport.cs||{95027D70-C6B4-4736-8A48-AD3582187321}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|d:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\nationaltask\\nationaltask\\views\\customer\\printbill.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|solutionrelative:nationaltask\\views\\customer\\printbill.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|d:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\nationaltask\\nationaltask\\views\\customer\\printallbills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|solutionrelative:nationaltask\\views\\customer\\printallbills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|d:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\nationaltask\\nationaltask\\views\\customer\\mybills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0742936B-A22D-43FC-9578-018383501C5B}|NationalTask\\NationalTask.csproj|solutionrelative:nationaltask\\views\\customer\\mybills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 752,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerBillReport.cs [Design]",
+              "DocumentMoniker": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Reports\\CustomerBillReport.cs",
+              "RelativeDocumentMoniker": "NationalTask\\Reports\\CustomerBillReport.cs",
+              "ToolTip": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Reports\\CustomerBillReport.cs [Design]*",
+              "RelativeToolTip": "NationalTask\\Reports\\CustomerBillReport.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T17:25:54.051Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MyBills.cshtml",
+              "DocumentMoniker": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\MyBills.cshtml",
+              "RelativeDocumentMoniker": "NationalTask\\Views\\Customer\\MyBills.cshtml",
+              "ToolTip": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\MyBills.cshtml",
+              "RelativeToolTip": "NationalTask\\Views\\Customer\\MyBills.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T17:21:48.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrintBill.cshtml",
+              "DocumentMoniker": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\PrintBill.cshtml",
+              "RelativeDocumentMoniker": "NationalTask\\Views\\Customer\\PrintBill.cshtml",
+              "ToolTip": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\PrintBill.cshtml",
+              "RelativeToolTip": "NationalTask\\Views\\Customer\\PrintBill.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T17:21:36.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PrintAllBills.cshtml",
+              "DocumentMoniker": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\PrintAllBills.cshtml",
+              "RelativeDocumentMoniker": "NationalTask\\Views\\Customer\\PrintAllBills.cshtml",
+              "ToolTip": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Views\\Customer\\PrintAllBills.cshtml",
+              "RelativeToolTip": "NationalTask\\Views\\Customer\\PrintAllBills.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T17:20:45.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "NationalTask\\Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\all the shitttttttt\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631\\codes\\NationalTask\\NationalTask\\Controllers\\CustomerController.cs*",
+              "RelativeToolTip": "NationalTask\\Controllers\\CustomerController.cs*",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAswJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T17:19:31.945Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 752,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

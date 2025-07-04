@@ -1,0 +1,68 @@
+@model IEnumerable<NationalTask.DTOs.BillDto>
+
+@{
+    ViewData["Title"] = "My Bills";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
+                    <div>
+                        <h2 class="mb-0">My Bills</h2>
+                        <p class="text-white-50 mb-0">Manage and view all your bills</p>
+                    </div>
+                    <a asp-action="CreateBill" class="btn btn-light">Create New Bill</a>
+                </div>
+                <div class="card-body p-4">
+                    @if (!Model.Any())
+                    {
+                        <div class="text-center py-5">
+                            <h4 class="text-muted mb-3">No bills found</h4>
+                            <p class="text-muted mb-4">You haven't created any bills yet. Start by creating your first bill!</p>
+                            <a asp-action="CreateBill" class="btn btn-primary btn-lg">Create Your First Bill</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Bill Code</th>
+                                        <th>Date</th>
+                                        <th>Total Price</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var bill in Model)
+                                    {
+                                        <tr>
+                                            <td><span class="fw-bold text-primary">@bill.Code</span></td>
+                                            <td>@bill.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                            <td><span class="fw-bold text-success">$@bill.TotalPrice.ToString("F2")</span></td>
+                                            <td class="text-center">
+                                                <a asp-action="BillDetails" asp-route-id="@bill.Id" class="btn btn-info btn-sm">View Details</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <span class="text-muted">Total Bills: <strong>@Model.Count()</strong></span>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a asp-action="Profile" class="btn btn-secondary">Back to Profile</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
