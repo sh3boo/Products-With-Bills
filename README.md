@@ -1,5 +1,17 @@
-### Dashboard
-![Dashboard Screenshot](ScreenShots/2.png)
+### Profile
+![Profile Screenshot](ScreenShots/2.png)
+
+### Customer Bills
+![Profile Screenshot](ScreenShots/3.png)
+
+### Create new Bill
+![New Bill Screenshot](ScreenShots/4.png)
+
+### Bill Details
+![Bill Details Screenshot](ScreenShots/5.png)
+
+### Bill with DevExpress
+![Bill with DevExpress Screenshot](ScreenShots/6.png)
 
 # NationalTask - Bill Management System
 
