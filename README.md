@@ -1,3 +1,6 @@
+### Dashboard
+![Dashboard Screenshot](Products-With-Bills\ScreenShots/2.png)
+
 # NationalTask - Bill Management System
 
 A modern, user-friendly web application for managing bills and products with a clean, simple design built using ASP.NET Core MVC.
